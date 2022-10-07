@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Form biglietto treno</title>
 </head>
+
 <body>
     <header>
         <p>Treniboolean</p>
     </header>
 
-    <main class="d-flex justify-content-end">
+    <main class="d-flex justify-content-start">
 
         <aside>
             <ul>
@@ -27,30 +30,40 @@
             </ul>
         </aside>
 
-        <div class="main-content">
-        <h3>Calcola la tua spesa</h3>
-        <p>Inserisci i km che devi percorrere e la tua età per scoprire la tariffa a te dedicata:</p>
-        <!-- <form> -->
-            <label for="km">Km da percorrere:</label><br>
-            <input type="number" id="km" name="km" value="">
-            <br>
-            <br>
-            <label for="eta">La tua età:</label><br>
-            <input type="number" id="eta" name="eta" value="">
-            <button id="invia" class="text-white">Calcola</button>
-            <br>
-            <br>
-        <!-- </form>  -->
-    
-        <p id="prezzoFinale-minorenni"></p>
-        <p id="prezzoFinale-over65"></p>
-        <p id="prezzoFinale-pieno"></p>
+        <div class="main-content d-flex justify-content-center align-items-center">
+            <div>
+                <h3>Calcola la tua spesa</h3>
+                <p>Inserisci i km che devi percorrere e la tua età per scoprire la tariffa a te dedicata:</p>
+                <!-- <form> -->
+                <label for="km">Km da percorrere:</label><br>
+                <input type="number" id="km" name="km" value="">
+                <br>
+                <br>
+                <label for="eta">La tua età:</label><br>
+                <input type="number" id="eta" name="eta" value="">
+                <button id="invia">Calcola</button>
+                <br>
+                <br>
+                <!-- </form>  -->
 
-        <p id="buon-viaggio"></p>
-    </div>
+                <p id="prezzoFinale-minorenni"></p>
+                <p id="prezzoFinale-over65"></p>
+                <p id="prezzoFinale-pieno"></p>
+
+                <p id="buon-viaggio"></p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end align-items-end pb-4 me-5 pe-5">
+            <div class="assistenza">
+                <div class="pb-3"><strong> Hai bisogno di aiuto?</strong></div>
+                <button>Clicca qui!</button>   
+            </div>               
+        </div>
     </main>
 
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>
