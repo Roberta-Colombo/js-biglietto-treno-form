@@ -14,7 +14,20 @@
         <p>Treniboolean</p>
     </header>
 
-    <div id="wrapper">
+    <main class="d-flex justify-content-end">
+
+        <aside>
+            <ul>
+                <li><a href="#">Viaggia con noi</a></li>
+                <li><a href="#">Itinerari</a></li>
+                <li><a href="#">Trova il tuo treno</a></li>
+                <li><a href="#">Biglietti</a></li>
+                <li><a href="#">Avvisi e comunicazioni</a></li>
+                <li><a href="#">I nostri servizi</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
         <h3>Calcola la tua spesa</h3>
         <p>Inserisci i km che devi percorrere e la tua età per scoprire la tariffa a te dedicata:</p>
         <!-- <form> -->
@@ -25,6 +38,8 @@
             <label for="eta">La tua età:</label><br>
             <input type="number" id="eta" name="eta" value="">
             <button id="invia">Invia</button>
+            <br>
+            <br>
         <!-- </form>  -->
     
         <p id="prezzoFinale-minorenni"></p>
@@ -33,6 +48,7 @@
 
         <p id="buon-viaggio"></p>
     </div>
+    </main>
 
 
     <script src="./js/script.js"></script>

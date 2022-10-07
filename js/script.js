@@ -35,19 +35,19 @@ const calcoloPrezzo = function() {
         console.log(prezzoTotale);
         console.log("Sconto del 20%");
         pPrezzoFinaleMinorenni.innerHTML = importo + prezzoMinorenni.toFixed(2) + " " + "euro<br>" + 
-        messaggio + "sconto del 20%";
+        messaggio + "<strong>sconto del 20%</strong>";
     } else if (eta > 65){
         prezzoTotale = prezzoOver65.toFixed(2);
         console.log(prezzoTotale);
         console.log("Sconto over 65");
         pPrezzoFinaleOver65.innerHTML = importo + prezzoOver65.toFixed(2) + " " + "euro<br>" + 
-        messaggio + "sconto del 40%";
+        messaggio + "<strong>sconto del 40%</strong>";
     } else {
         prezzoTotale.toFixed(2);
         console.log(prezzoTotale);
         console.log("Prezzo pieno");
         pPrezzoFinalePieno.innerHTML = importo + prezzoTotale.toFixed(2) + " " + "euro<br>" + 
-        messaggio + "prezzo pieno";
+        messaggio + "<strong>prezzo pieno</strong>";
     }
 
     const buonviaggio = document.getElementById("buon-viaggio");
