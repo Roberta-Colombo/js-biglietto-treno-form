@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Form biglietto treno</title>
 </head>
 <body>
-    <!-- <form> -->
-        <label for="km">Km da percorrere:</label><br>
-        <input type="number" id="km" name="km" value="">
-        <br>
-        <label for="eta">La tua età:</label><br>
-        <input type="number" id="eta" name="eta" value="">
-        <button id="invia">Invia</button>
-    <!-- </form>  -->
+    <header>
+        <p>Treniboolean</p>
+    </header>
+
+    <div id="wrapper">
+        <h3>Calcola la tua spesa</h3>
+        <p>Inserisci i km che devi percorrere e la tua età per scoprire la tariffa a te dedicata:</p>
+        <!-- <form> -->
+            <label for="km">Km da percorrere:</label><br>
+            <input type="number" id="km" name="km" value="">
+            <br>
+            <br>
+            <label for="eta">La tua età:</label><br>
+            <input type="number" id="eta" name="eta" value="">
+            <button id="invia">Invia</button>
+        <!-- </form>  -->
     
-    <p id="prezzoFinale-minorenni"></p>
-    <p id="prezzoFinale-over65"></p>
-    <p id="prezzoFinale-pieno"></p>
+        <p id="prezzoFinale-minorenni"></p>
+        <p id="prezzoFinale-over65"></p>
+        <p id="prezzoFinale-pieno"></p>
+
+        <p id="buon-viaggio"></p>
+    </div>
+
 
     <script src="./js/script.js"></script>
 </body>

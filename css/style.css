@@ -1,0 +1,18 @@
+#wrapper {
+    margin: 80px auto;
+    width: 50%;
+}
+
+header {
+    border-bottom: 1px solid rgb(125,4,7);
+    height: 90px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgba(184,23,38,1) 80%, rgba(125,4,7,1) 100%);    
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: white;
+    text-align: right;
+    text-decoration: underline;
+    padding-top: 15px;
+    
+}

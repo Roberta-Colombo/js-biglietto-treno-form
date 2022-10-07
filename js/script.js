@@ -21,7 +21,7 @@ const calcoloPrezzo = function() {
     let prezzoOver65 = prezzoTotale - scontoOver65;
 // console.log(prezzoOver65);
 
-    const messaggio = "Tariffa applicata:";
+    const messaggio = "Tariffa applicata: ";
     const importo = "Il tuo importo finale: "
 
     const pPrezzoFinaleMinorenni = document.getElementById("prezzoFinale-minorenni");
@@ -35,20 +35,23 @@ const calcoloPrezzo = function() {
         console.log(prezzoTotale);
         console.log("Sconto del 20%");
         pPrezzoFinaleMinorenni.innerHTML = importo + prezzoMinorenni.toFixed(2) + " " + "euro<br>" + 
-        messaggio + " sconto del 20%";
+        messaggio + "sconto del 20%";
     } else if (eta > 65){
         prezzoTotale = prezzoOver65.toFixed(2);
         console.log(prezzoTotale);
         console.log("Sconto over 65");
         pPrezzoFinaleOver65.innerHTML = importo + prezzoOver65.toFixed(2) + " " + "euro<br>" + 
-        messaggio + " sconto del 40%";
+        messaggio + "sconto del 40%";
     } else {
         prezzoTotale.toFixed(2);
         console.log(prezzoTotale);
         console.log("Prezzo pieno");
         pPrezzoFinalePieno.innerHTML = importo + prezzoTotale.toFixed(2) + " " + "euro<br>" + 
-        messaggio + " prezzo pieno";
+        messaggio + "prezzo pieno";
     }
+
+    const buonviaggio = document.getElementById("buon-viaggio");
+    buonviaggio.innerHTML = "Buon viaggio con Treniboolean! &hearts;";
 }
 
 button.addEventListener('click', calcoloPrezzo);
