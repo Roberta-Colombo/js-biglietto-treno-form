@@ -1,50 +1,45 @@
-// if(isNaN(km) || isNaN(eta)){
-//     alert("Inserire cifre");
-// }
-
 const button = document.getElementById('invia');
 
 const calcoloPrezzo = function() {
     let km = document.getElementById('km').value; 
     let eta = document.getElementById('eta').value;
-    console.log(km);
-    console.log(eta);
+    // console.log(km);
+    // console.log(eta);
 
     let prezzoTotale = 0.21 * km;
-console.log(prezzoTotale);
+// console.log(prezzoTotale);
 
     let scontoMinorenni = (prezzoTotale * 20) / 100;
-console.log(scontoMinorenni);
+// console.log(scontoMinorenni);
 
     let prezzoMinorenni = prezzoTotale - scontoMinorenni;
-console.log(prezzoMinorenni);
+// console.log(prezzoMinorenni);
 
     let scontoOver65 = (prezzoTotale * 40) / 100;
-console.log(scontoOver65);
+// console.log(scontoOver65);
 
     let prezzoOver65 = prezzoTotale - scontoOver65;
-console.log(prezzoOver65);
+// console.log(prezzoOver65);
 
     if(eta < 18){
-        prezzoTotale = prezzoMinorenni;
-    console.log("Sconto del 20%");
+        prezzoTotale = prezzoMinorenni.toFixed(2);
+        console.log(prezzoTotale);
+        console.log("Sconto del 20%");
     } else if (eta > 65){
-    prezzoTotale = prezzoOver65;
-    console.log("Sconto over 65");
+        prezzoTotale = prezzoOver65.toFixed(2);
+        console.log(prezzoTotale);
+        console.log("Sconto over 65");
     } else {
-    prezzoTotale;
-    console.log("Prezzo pieno");
+        prezzoTotale = prezzoTotale.toFixed(2);
+        console.log(prezzoTotale);
+        console.log("Prezzo pieno");
     }
-
-    let prezzoUmano = prezzoTotale.toFixed(2); 
-
-//     const pPrezzoFinale = document.getElementById("prezzo-finale");
-// pPrezzoFinale.innerText = prezzoUmano + " " + "euro";
-
 }
 
 button.addEventListener('click', calcoloPrezzo);
 
+//     const pPrezzoFinale = document.getElementById("prezzo-finale");
+// pPrezzoFinale.innerText = prezzoUmano + " " + "euro";
 
 
 
