@@ -52,3 +52,21 @@ li {
     margin-bottom: 15px;
 }
 
+#invia {
+    margin-left: 15px;
+    border-style: none;
+    background-color: rgb(125,4,7);
+    border-radius: 5px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+}
+
+#invia:hover {
+    opacity: 0.8;
+}
+
+
+
+
