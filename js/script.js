@@ -63,17 +63,17 @@ const calcoloPrezzo = function() {
     }
 
     const buonviaggio = document.getElementById("buon-viaggio");
-    buonviaggio.innerHTML = "Buon viaggio con Treniboolean! <span class='heart-red'>&hearts;</span>";
+    buonviaggio.innerHTML = "Buon viaggio con Treniboolean! <span class='text-red'>&hearts;</span>";
 }
 
 button.addEventListener('click', calcoloPrezzo);
 
 const modalBg = document.querySelector('.modal-bg');
-console.log(modalBg);
+// console.log(modalBg);
 const trigger = document.getElementById('trigger');
-console.log(trigger);
+// console.log(trigger);
 const close = document.getElementById('close');
-console.log(close);
+// console.log(close);
 
 
 const toggleModal = function() {
@@ -83,4 +83,23 @@ const toggleModal = function() {
 
 trigger.addEventListener('click', toggleModal);
 close.addEventListener('click', toggleModal); 
+
+const giorno = ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"];
+
+const mese = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+
+const d = new Date();
+let day = giorno[d.getDay()];
+// console.log(day);
+let date = d.getDate();
+// console.log(date);
+let month = mese [d.getMonth()];
+// console.log(month);
+let year = d.getFullYear();
+// console.log(year);
+
+const dataOdierna = day + ' ' + date + ' ' + month + ' ' + year + ',';
+
+const spanDataOdierna = document.getElementById('data-odierna');
+spanDataOdierna.innerHTML = dataOdierna;
 
