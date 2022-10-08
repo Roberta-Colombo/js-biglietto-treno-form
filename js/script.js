@@ -7,19 +7,19 @@ const calcoloPrezzo = function() {
     // console.log(eta);
 
     let prezzoTotale = 0.21 * km;
-// console.log(prezzoTotale);
+    // console.log(prezzoTotale);
 
     let scontoMinorenni = (prezzoTotale * 20) / 100;
-// console.log(scontoMinorenni);
+    // console.log(scontoMinorenni);
 
     let prezzoMinorenni = prezzoTotale - scontoMinorenni;
-// console.log(prezzoMinorenni);
+    // console.log(prezzoMinorenni);
 
     let scontoOver65 = (prezzoTotale * 40) / 100;
-// console.log(scontoOver65);
+    // console.log(scontoOver65);
 
     let prezzoOver65 = prezzoTotale - scontoOver65;
-// console.log(prezzoOver65);
+    // console.log(prezzoOver65);
 
     const messaggio = "Tariffa applicata: ";
     const importo = "Il tuo importo finale: "
@@ -32,31 +32,41 @@ const calcoloPrezzo = function() {
 
     if(eta < 18){
         prezzoTotale = prezzoMinorenni.toFixed(2);
-        console.log(prezzoTotale);
-        console.log("Sconto del 20%");
-        pPrezzoFinaleMinorenni.innerHTML = importo + prezzoMinorenni.toFixed(2) + " " + "euro<br>" + 
+        // console.log(prezzoTotale);
+        // console.log("Sconto del 20%");
+
+        const bgPrezzo18 = "<span class='bg-red'>" + prezzoMinorenni.toFixed(2) + " " + "euro<br>" + "</span>";
+        
+        pPrezzoFinaleMinorenni.innerHTML = importo + bgPrezzo18 +
         messaggio + "<strong>sconto del 20%</strong>";
+
+
     } else if (eta > 65){
         prezzoTotale = prezzoOver65.toFixed(2);
-        console.log(prezzoTotale);
-        console.log("Sconto over 65");
-        pPrezzoFinaleOver65.innerHTML = importo + prezzoOver65.toFixed(2) + " " + "euro<br>" + 
+        // console.log(prezzoTotale);
+        // console.log("Sconto over 65");
+
+        const bgPrezzo65 = "<span class='bg-red'>" + prezzoOver65.toFixed(2) + " " + "euro<br>" + "</span>";
+        
+        pPrezzoFinaleOver65.innerHTML = importo + bgPrezzo65 +
         messaggio + "<strong>sconto del 40%</strong>";
+
     } else {
         prezzoTotale.toFixed(2);
-        console.log(prezzoTotale);
-        console.log("Prezzo pieno");
-        pPrezzoFinalePieno.innerHTML = importo + prezzoTotale.toFixed(2) + " " + "euro<br>" + 
+        // console.log(prezzoTotale);
+        // console.log("Prezzo pieno");
+
+        const bgPrezzo = "<span class='bg-red'>" + prezzoTotale.toFixed(2) + " " + "euro<br>" + "</span>";
+        
+        pPrezzoFinalePieno.innerHTML = importo + bgPrezzo +
         messaggio + "<strong>prezzo pieno</strong>";
     }
 
     const buonviaggio = document.getElementById("buon-viaggio");
-    buonviaggio.innerHTML = "Buon viaggio con Treniboolean! &hearts;";
+    buonviaggio.innerHTML = "Buon viaggio con Treniboolean! <span class='heart-red'>&hearts;</span>";
 }
 
 button.addEventListener('click', calcoloPrezzo);
-
-
 
 const modalBg = document.querySelector('.modal-bg');
 console.log(modalBg);
@@ -73,3 +83,4 @@ const toggleModal = function() {
 
 trigger.addEventListener('click', toggleModal);
 close.addEventListener('click', toggleModal); 
+

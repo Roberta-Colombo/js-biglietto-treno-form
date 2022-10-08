@@ -1,10 +1,4 @@
-/* #wrapper {
-    margin: 60px auto;
-    width: 50%;
-} */
-
 header {
-    /* border-bottom: 1px solid rgb(125,4,7); */
     height: 90px;
     background: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgba(184,23,38,1) 80%, rgba(125,4,7,1) 100%);    
     font-family: 'Orbitron', sans-serif;
@@ -14,7 +8,7 @@ header {
     text-align: right;
     text-decoration: underline;
     padding-top: 15px;
-    padding-right: 10px;   
+    padding-right: 20px;   
 }
 
 main {
@@ -50,6 +44,11 @@ li a:hover {
 
 li { 
     margin-bottom: 15px;
+}
+
+#km, #eta {
+    border: 3px solid rgb(125,4,7);
+    border-radius: 5px;
 }
 
 button, #invia {
@@ -128,3 +127,13 @@ button:hover {
     color: rgb(183, 107, 107);
     font-size: 1.5rem;
 }
+
+.bg-red {
+    background-color: rgba(125, 4, 6, 0.08);
+    padding: 3px;
+}
+
+.heart-red {
+    color: rgb(125,4,7);
+}
+
